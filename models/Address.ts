@@ -1,6 +1,5 @@
 import { sequelize } from "../config/config";
-import { DataTypes, Model, Association } from "sequelize";
-import { User } from "./User";
+import { DataTypes, Model } from "sequelize";
 
 interface AddressAttributes {
   user_id:number;
@@ -8,17 +7,7 @@ interface AddressAttributes {
   address_detail: string;
 }
 
-class Address extends Model<AddressAttributes> {
-  // public user_id!: number;
-  // public address!: string;
-  // public address_detail!: string;
-  // public readonly createdAt!: Date;
-  // public readonly updatedAt!: Date;
-  // public static associations: {
-  //   userHasManyAddresses: Association<User,Address>,
-  // }
-}
-
+class Address extends Model<AddressAttributes> {}
 Address.init({
     user_id: {
       type: DataTypes.INTEGER,

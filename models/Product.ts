@@ -1,6 +1,5 @@
 import { sequelize } from "../config/config";
 import { DataTypes, Model } from "sequelize";
-import { Order } from "./Order";
 
 interface ProductAttributes {
   id:number;
@@ -9,15 +8,7 @@ interface ProductAttributes {
   price: number;
 }
 
-class Product extends Model<ProductAttributes> {
-  // public readonly id!: number;
-  // public name!: string;
-  // public company!: string;
-  // public price!: number;
-  // public readonly createdAt!: Date;
-  // public readonly updatedAt!: Date;
-}
-
+class Product extends Model<ProductAttributes> {}
 Product.init({
     id: {
       type: DataTypes.INTEGER,

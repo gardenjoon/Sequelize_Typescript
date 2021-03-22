@@ -1,7 +1,5 @@
 import { sequelize } from "../config/config";
 import { DataTypes, Model } from "sequelize";
-import { Order } from "./Order";
-import { Address } from "./Address";
 
 interface UserAttributes {
   id:number;
@@ -9,14 +7,7 @@ interface UserAttributes {
   phonenumber: string;
 }
 
-class User extends Model<UserAttributes> {
-  // public readonly id!: number;
-  // public name!: string;
-  // public phonenumber!: number;
-  // public readonly createdAt!: Date;
-  // public readonly updatedAt!: Date;
-}
-
+class User extends Model<UserAttributes> {}
 User.init({
     id: {
       type: DataTypes.INTEGER,

@@ -1,8 +1,8 @@
 import { sequelize } from "./config/config"
-import {User} from "./models/User";
-import {Product} from "./models/Product";
-import {Order} from "./models/Order";
-import {Address} from "./models/Address";
+import { User } from "./models/User";
+import { Product } from "./models/Product";
+import { Order } from "./models/Order";
+import { Address } from "./models/Address";
 
 User.hasMany(Order, {
   sourceKey : 'id',

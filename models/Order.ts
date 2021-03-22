@@ -1,20 +1,12 @@
 import { sequelize } from "../config/config";
-import { DataTypes, Model, Association } from "sequelize";
-import { User } from "./User";
-import { Product } from "./Product";
+import { DataTypes, Model } from "sequelize";
 
 interface OrderAttributes {
   user_id:number;
   product_id: number;
 }
 
-class Order extends Model<OrderAttributes> {
-  // public user_id!: number;
-  // public product_id!: number;
-  // public readonly createdAt!: Date;
-  // public readonly updatedAt!: Date;
-}
-
+class Order extends Model<OrderAttributes> {}
 Order.init(
   {
     user_id: {
@@ -31,7 +23,5 @@ Order.init(
     timestamps : true,
   }
 )
-
-
 
 export {Order}
